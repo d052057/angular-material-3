@@ -31,7 +31,7 @@
                 "input": "public"
               }
             ],
-                        "styles": [
+            "styles": [
               "node_modules/material-icons/iconfont/material-icons.css",
               "src/styles.scss"
             ],

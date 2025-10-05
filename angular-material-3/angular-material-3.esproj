@@ -7,4 +7,7 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\angular-material-3\browser\</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="node_modules\%40angular\material\" />
+  </ItemGroup>
 </Project>

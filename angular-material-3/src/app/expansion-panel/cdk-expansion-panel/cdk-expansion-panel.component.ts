@@ -1,5 +1,5 @@
 import { CdkAccordion, CdkAccordionItem } from "@angular/cdk/accordion";
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 
 @Component({
@@ -86,6 +86,7 @@ import { SectionComponent } from "../../section/section.component";
       border-bottom-right-radius: 4px;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [CdkAccordion, CdkAccordionItem, SectionComponent]
 })
 export class CdkExpansionPanelComponent {

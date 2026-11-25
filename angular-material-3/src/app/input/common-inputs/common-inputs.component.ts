@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatFormField, MatLabel } from "@angular/material/form-field";
 import { MatSelect, MatOption } from "@angular/material/select";
@@ -29,6 +29,7 @@ import { InputsAppearanceService } from "../appearance.service";
       </div>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .common-inputs-wrapper {
       display: flex;

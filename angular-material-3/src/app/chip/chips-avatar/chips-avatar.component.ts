@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatChip, MatChipAvatar, MatChipSet } from "@angular/material/chips";
 
@@ -31,6 +31,7 @@ import { MatChip, MatChipAvatar, MatChipSet } from "@angular/material/chips";
       </mat-chip-set>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [SectionComponent, MatChip, MatChipSet, MatChipAvatar]
 })
 export class ChipsAvatarComponent {}

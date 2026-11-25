@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BasicMenuComponent } from "./basic-menu/basic-menu.component";
 import { MenuWithIconsComponent } from "./menu-with-icons/menu-with-icons.component";
 import { NestedMenuComponent } from "./nested-menu/nested-menu.component";
@@ -12,6 +12,7 @@ import { NestedMenuComponent } from "./nested-menu/nested-menu.component";
       <app-nested-menu />
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [BasicMenuComponent, MenuWithIconsComponent, NestedMenuComponent]
 })
 export default class MenuPageComponent {}

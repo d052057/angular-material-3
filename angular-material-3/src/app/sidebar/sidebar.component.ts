@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatNavList, MatListItem } from "@angular/material/list";
 import { SIDEBAR_LINKS } from "./sidebar-options";
 import { RouterLink, RouterLinkActive } from "@angular/router";
@@ -26,6 +26,7 @@ import { MatSidenav } from "@angular/material/sidenav";
       margin-bottom: 0.35rem;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatNavList, MatListItem, RouterLink, RouterLinkActive, QuicklinkDirective]
 })
 export class SidebarComponent {

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { ThemeToggleComponent } from "../theme/theme-toggle.component";
 import { NgOptimizedImage } from "@angular/common";
 
@@ -34,6 +34,7 @@ import { NgOptimizedImage } from "@angular/common";
       width: 100%;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ThemeToggleComponent, NgOptimizedImage]
 })
 export class NavbarComponent {}

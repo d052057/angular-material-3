@@ -1,5 +1,5 @@
 import { InputsAppearanceService } from "../input/appearance.service";
-import { Component, computed, inject } from "@angular/core";
+import { Component, computed, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatSlideToggle, MatSlideToggleChange } from "@angular/material/slide-toggle";
 
 @Component({
@@ -14,6 +14,7 @@ import { MatSlideToggle, MatSlideToggleChange } from "@angular/material/slide-to
       margin-bottom: 1.2rem;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatSlideToggle]
 })
 export class AppearanceToggleComponent {

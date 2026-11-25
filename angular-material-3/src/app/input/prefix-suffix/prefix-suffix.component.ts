@@ -1,4 +1,4 @@
-import { Component, inject, signal } from "@angular/core";
+import { Component, inject, signal, ChangeDetectionStrategy } from "@angular/core";
 import { MatIcon } from "@angular/material/icon";
 import { MatInput } from "@angular/material/input";
 import { MatFormField, MatLabel, MatPrefix, MatSuffix } from "@angular/material/form-field";
@@ -30,6 +30,7 @@ import { InputsAppearanceService } from "../appearance.service";
       <span matTextSuffix>.00</span>
     </mat-form-field>
   </app-section> `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .example-right-align {
       text-align: right;

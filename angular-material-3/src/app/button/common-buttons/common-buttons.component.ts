@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
@@ -60,6 +60,7 @@ import { MatIcon } from "@angular/material/icon";
       </div>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .wrapper {
       display: flex;

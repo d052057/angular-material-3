@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, viewChild } from "@angular/core";
+import { Component, ElementRef, inject, viewChild, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { InputsAppearanceService } from "../../input/appearance.service";
 import { MatFormField, MatLabel } from "@angular/material/form-field";
@@ -53,6 +53,7 @@ import { AppearanceToggleComponent } from "../../field-appearance-toggle/appeara
       </form>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         SectionComponent,
         MatFormField,

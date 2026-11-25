@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatFormField, MatHint, MatLabel, MatSuffix } from "@angular/material/form-field";
 import {
   MatDatepicker,
@@ -25,6 +25,7 @@ import { InputsAppearanceService } from "../../input/appearance.service";
       </mat-form-field>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         MatFormField,
         MatLabel,

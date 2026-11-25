@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
 import { MatSnackBarAction, MatSnackBarActions, MatSnackBarLabel, MatSnackBarRef } from "@angular/material/snack-bar";
@@ -15,6 +15,7 @@ import { MatSnackBarAction, MatSnackBarActions, MatSnackBarLabel, MatSnackBarRef
       </button>
     </span>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     :host {
       display: flex;

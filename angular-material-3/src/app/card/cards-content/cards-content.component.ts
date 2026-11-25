@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {
   MatCardActions,
   MatCardContent,
@@ -52,6 +52,7 @@ import { MatIcon } from "@angular/material/icon";
       </button>
     </mat-card-actions>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .image-wrapper {
       position: relative;

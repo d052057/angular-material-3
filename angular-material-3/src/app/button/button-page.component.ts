@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { CommonButtonsComponent } from "./common-buttons/common-buttons.component";
 import { SegmentedButtonsComponent } from "./segmented-buttons/segmented-buttons.component";
 import { IconButtonsComponent } from "./icon-buttons/icon-buttons.component";
@@ -12,6 +12,7 @@ import { FabButtonsComponent } from "./fab-buttons/fab-buttons.component";
     <app-icon-buttons />
     <app-fab-buttons />
   </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [CommonButtonsComponent, SegmentedButtonsComponent, IconButtonsComponent, FabButtonsComponent]
 })
 export default class ButtonPageComponent {}

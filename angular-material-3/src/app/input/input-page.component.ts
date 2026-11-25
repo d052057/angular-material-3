@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { AppearanceToggleComponent } from "../field-appearance-toggle/appearance-toggle.component";
 import { AutocompleteComponent } from "./autocomplete/autocomplete.component";
 import { CommonInputsComponent } from "./common-inputs/common-inputs.component";
@@ -20,6 +20,7 @@ import { InputErrorComponent } from "./input-error/input-error.component";
       max-width: 420px;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         AppearanceToggleComponent,
         AutocompleteComponent,

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BasicDatepickerComponent } from "./basic-datepicker/basic-datepicker.component";
 import { AppearanceToggleComponent } from "../field-appearance-toggle/appearance-toggle.component";
 import { RangeDatepickerComponent } from "./range-datepicker/range-datepicker.component";
@@ -12,6 +12,7 @@ import { RangeDatepickerComponent } from "./range-datepicker/range-datepicker.co
       <app-range-datepicker />
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [BasicDatepickerComponent, AppearanceToggleComponent, RangeDatepickerComponent]
 })
 export default class DatePickerPageComponent {}

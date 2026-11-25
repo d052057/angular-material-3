@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatTabGroup, MatTab } from "@angular/material/tabs";
 
@@ -13,6 +13,7 @@ import { MatTabGroup, MatTab } from "@angular/material/tabs";
       </mat-tab-group>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [SectionComponent, MatTabGroup, MatTab]
 })
 export class BasicTabComponent {}

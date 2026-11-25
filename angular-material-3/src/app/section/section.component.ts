@@ -1,4 +1,4 @@
-import { Component, input } from "@angular/core";
+import { Component, input, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
   selector: "app-section",
@@ -9,6 +9,7 @@ import { Component, input } from "@angular/core";
       <ng-content />
     </section>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: `
     h3 {
       margin-top: 0;

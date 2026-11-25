@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, viewChild } from "@angular/core";
+import { AfterViewInit, Component, viewChild, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import {
   MatTable,
@@ -58,6 +58,7 @@ import { ELEMENT_DATA, PeriodicElement } from "../data";
       width: 100%;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         SectionComponent,
         MatTable,

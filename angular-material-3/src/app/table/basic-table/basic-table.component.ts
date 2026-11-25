@@ -1,4 +1,4 @@
-import { Component, computed, input } from "@angular/core";
+import { Component, computed, input, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import {
   MatCell,
@@ -50,6 +50,7 @@ import { NgClass } from "@angular/common";
       width: 100%;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         SectionComponent,
         MatTable,

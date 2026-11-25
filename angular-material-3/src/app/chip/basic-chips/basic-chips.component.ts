@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatChipListbox, MatChipOption } from "@angular/material/chips";
 import { SectionComponent } from "../../section/section.component";
 
 @Component({
     selector: "app-basic-chips",
     imports: [MatChipListbox, MatChipOption, SectionComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-section title="Basic Chips">
       <mat-chip-listbox aria-label="Fish selection">

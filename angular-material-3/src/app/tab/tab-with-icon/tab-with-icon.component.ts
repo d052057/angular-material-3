@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatIcon } from "@angular/material/icon";
 import { MatTabGroup, MatTab, MatTabLabel } from "@angular/material/tabs";
 import { SectionComponent } from "../../section/section.component";
@@ -40,6 +40,7 @@ import { SectionComponent } from "../../section/section.component";
       margin-right: 8px;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatTabGroup, MatTab, MatIcon, MatTabLabel, SectionComponent]
 })
 export class TabWithIconComponent {}

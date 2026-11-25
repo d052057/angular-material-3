@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatButton } from "@angular/material/button";
 import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle } from "@angular/material/dialog";
 
 @Component({
     selector: "app-scrollable-dialog",
     imports: [MatDialogContent, MatDialogTitle, MatDialogClose, MatDialogActions, MatButton],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <h2 mat-dialog-title>Install Angular</h2>
     <mat-dialog-content>

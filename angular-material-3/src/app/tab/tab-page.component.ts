@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BasicTabComponent } from "./basic-tab/basic-tab.component";
 import { TabWithIconComponent } from "./tab-with-icon/tab-with-icon.component";
 
@@ -10,6 +10,7 @@ import { TabWithIconComponent } from "./tab-with-icon/tab-with-icon.component";
       <app-tab-with-icon />
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [BasicTabComponent, TabWithIconComponent]
 })
 export default class TabPageComponent {}

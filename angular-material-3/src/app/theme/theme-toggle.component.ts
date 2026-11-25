@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatIconButton } from "@angular/material/button";
 import { MatDialog } from "@angular/material/dialog";
 import { MatIcon } from "@angular/material/icon";
@@ -12,6 +12,7 @@ import { MatTooltip } from "@angular/material/tooltip";
       <mat-icon> palette </mat-icon>
     </button>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatIcon, MatIconButton, MatTooltip]
 })
 export class ThemeToggleComponent {

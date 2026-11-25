@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BasicTableComponent } from "./basic-table/basic-table.component";
 import { TableWithPaginationComponent } from "./table-with-pagination/table-with-pagination.component";
 
@@ -14,6 +14,7 @@ import { TableWithPaginationComponent } from "./table-with-pagination/table-with
       width: 100%;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [BasicTableComponent, TableWithPaginationComponent]
 })
 export default class TablePageComponent {}

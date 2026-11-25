@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatButton } from "@angular/material/button";
 import { MatMenu, MatMenuItem, MatMenuTrigger } from "@angular/material/menu";
 import { SectionComponent } from "../../section/section.component";
@@ -14,6 +14,7 @@ import { SectionComponent } from "../../section/section.component";
       </mat-menu>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatButton, MatMenu, MatMenuItem, MatMenuTrigger, SectionComponent]
 })
 export class BasicMenuComponent {}

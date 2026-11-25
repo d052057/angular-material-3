@@ -1,4 +1,4 @@
-import { Component, Renderer2, effect, inject } from "@angular/core";
+import { Component, Renderer2, effect, inject, ChangeDetectionStrategy } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { LayoutComponent } from "./layout/layout.component";
 import { DOCUMENT } from "@angular/common";
@@ -7,6 +7,7 @@ import { ThemeService } from "./theme/theme.service";
 @Component({
     selector: "app-root",
     imports: [LayoutComponent, RouterOutlet],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: "./app.component.html"
 })
 export class AppComponent {

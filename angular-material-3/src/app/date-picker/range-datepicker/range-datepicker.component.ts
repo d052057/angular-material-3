@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import {
   MatDatepicker,
   MatDatepickerToggle,
@@ -33,6 +33,7 @@ import { InputsAppearanceService } from "../../input/appearance.service";
         MatEndDate,
     ],
     providers: [provideNativeDateAdapter()],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-section title="Range Datepicker">
       <mat-form-field [appearance]="appearance()">

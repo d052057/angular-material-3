@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatButtonToggle, MatButtonToggleGroup } from "@angular/material/button-toggle";
 
@@ -19,6 +19,7 @@ import { MatButtonToggle, MatButtonToggleGroup } from "@angular/material/button-
       </mat-button-toggle-group>
     </div>
   </app-section>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .segmented-buttons-wrapper {
       display: flex;

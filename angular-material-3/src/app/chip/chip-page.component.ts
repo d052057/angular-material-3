@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { ChipsAvatarComponent } from "./chips-avatar/chips-avatar.component";
 import { BasicChipsComponent } from "./basic-chips/basic-chips.component";
 import { ChipsDragAndDropComponent } from "./chips-drag-and-drop/chips-drag-and-drop.component";
@@ -12,6 +12,7 @@ import { ChipsAutocompleteComponent } from "./chips-autocomplete/chips-autocompl
     <app-chips-drag-and-drop />
     <app-chips-autocomplete />
   </div>`,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ChipsAvatarComponent, BasicChipsComponent, ChipsDragAndDropComponent, ChipsAutocompleteComponent]
 })
 export default class ChipPageComponent {}

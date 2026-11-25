@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { CardElevatedComponent } from "./card-elevated/card-elevated.component";
 import { CardOutlinedComponent } from "./card-outlined/card-outlined.component";
 import { CardFilledComponent } from "./card-filled/card-filled.component";
@@ -28,6 +28,7 @@ import { CardFilledComponent } from "./card-filled/card-filled.component";
       }
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [CardElevatedComponent, CardOutlinedComponent, CardFilledComponent]
 })
 export default class CardPageComponent {}

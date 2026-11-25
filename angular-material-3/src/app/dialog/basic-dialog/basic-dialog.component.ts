@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatDialogActions, MatDialogClose, MatDialogContent} from "@angular/material/dialog";
 import { MatIcon } from "@angular/material/icon";
 import { MatDivider } from "@angular/material/divider";
@@ -60,6 +60,7 @@ import { NgClass } from "@angular/common";
       <button mat-button cdkFocusInitial mat-dialog-close>Accept</button>
     </mat-dialog-actions>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     .icon-wrapper {
       display: flex;

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatIcon } from "@angular/material/icon";
 import { MatIconButton } from "@angular/material/button";
@@ -7,6 +7,7 @@ import { MatTooltip } from "@angular/material/tooltip";
 @Component({
     selector: "app-icon-buttons",
     imports: [SectionComponent, MatIcon, MatIconButton, MatTooltip],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-section title="Icon Buttons">
       <div class="flex-wrapper">

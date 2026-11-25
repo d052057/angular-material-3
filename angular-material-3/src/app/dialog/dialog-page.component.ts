@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { BasicDialogComponent } from "./basic-dialog/basic-dialog.component";
 import { MatDialog } from "@angular/material/dialog";
 import { MatButton } from "@angular/material/button";
@@ -12,6 +12,7 @@ import { ScrollableDialogComponent } from "./scrollable-dialog/scrollable-dialog
       <button mat-button (click)="openScrollableDialog()">Open Scrollable Dialog</button>
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [ MatButton]
 })
 export default class DialogPageComponent {

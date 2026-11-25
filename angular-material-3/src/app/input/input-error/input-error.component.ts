@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatFormField, MatLabel, MatError } from "@angular/material/form-field";
 import { FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
@@ -18,6 +18,7 @@ import { InputsAppearanceService } from "../appearance.service";
       </mat-form-field>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [SectionComponent, MatFormField, MatLabel, ReactiveFormsModule, MatError, MatInput]
 })
 export class InputErrorComponent {

@@ -1,4 +1,4 @@
-import { Component, signal } from "@angular/core";
+import { Component, signal, ChangeDetectionStrategy } from "@angular/core";
 import { MatIcon } from "@angular/material/icon";
 import { MatBadge } from "@angular/material/badge";
 import { MatButton } from "@angular/material/button";
@@ -30,6 +30,7 @@ import { MatButton } from "@angular/material/button";
       <span class="cdk-visually-hidden"> Example with a home icon with overlaid badge showing the number 15 </span>
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     styles: `
     :host {
       display: flex;

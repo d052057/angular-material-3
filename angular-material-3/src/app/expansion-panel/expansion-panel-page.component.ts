@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BasicExpansionPanelComponent } from "./basic-expansion-panel/basic-expansion-panel.component";
 import { CdkExpansionPanelComponent } from "./cdk-expansion-panel/cdk-expansion-panel.component";
 
@@ -11,6 +11,7 @@ import { CdkExpansionPanelComponent } from "./cdk-expansion-panel/cdk-expansion-
       <app-cdk-expansion-panel />
     </div>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [BasicExpansionPanelComponent, CdkExpansionPanelComponent]
 })
 export default class ExpansionPanelPageComponent {

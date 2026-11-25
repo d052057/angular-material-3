@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatCard } from "@angular/material/card";
 import { SectionComponent } from "../../section/section.component";
 import { MatButton } from "@angular/material/button";
@@ -7,6 +7,7 @@ import { CardsContentComponent } from "../cards-content/cards-content.component"
 @Component({
     selector: "app-card-elevated",
     imports: [MatCard, SectionComponent,  CardsContentComponent],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-section title="Elevated Card">
       <mat-card>

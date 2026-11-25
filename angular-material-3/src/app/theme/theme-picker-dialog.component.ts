@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatButton } from "@angular/material/button";
 import { THEME_OPTIONS } from "./theme-options";
 import { MatDialogContent, MatDialogRef, MatDialogTitle } from "@angular/material/dialog";
@@ -53,6 +53,7 @@ import { MatIcon } from "@angular/material/icon";
       gap: 0.5rem;
     }
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatButton, MatDialogTitle, MatDialogContent, MatIcon]
 })
 export class ThemePickerDialogComponent {

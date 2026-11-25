@@ -1,4 +1,4 @@
-import { Component, input, signal } from "@angular/core";
+import { Component, input, signal, ChangeDetectionStrategy } from "@angular/core";
 import {
   MatAccordion,
   MatExpansionPanel,
@@ -46,6 +46,7 @@ import { MatButton } from "@angular/material/button";
       </mat-accordion>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         MatAccordion,
         MatExpansionPanel,

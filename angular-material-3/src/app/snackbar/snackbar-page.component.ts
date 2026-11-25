@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatButton } from "@angular/material/button";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { SnackbarCustomComponent } from "./snackbar-custom/snackbar-custom.component";
@@ -6,6 +6,7 @@ import { SnackbarCustomComponent } from "./snackbar-custom/snackbar-custom.compo
 @Component({
     selector: "app-snackbar-page",
     imports: [MatButton],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: ` <button mat-button (click)="openSnackbar()">Open Snackbar</button> `
 })
 export default class SnackbarPageComponent {

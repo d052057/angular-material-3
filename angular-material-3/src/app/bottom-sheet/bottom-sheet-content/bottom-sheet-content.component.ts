@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { MatLine } from "@angular/material/core";
 import { MatListItem, MatListItemTitle, MatNavList } from "@angular/material/list";
 import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
@@ -6,6 +6,7 @@ import { MatBottomSheetRef } from "@angular/material/bottom-sheet";
 @Component({
     selector: "app-bottom-sheet-content",
     imports: [MatNavList, MatListItem, MatLine, MatListItemTitle],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <mat-nav-list>
       <a href="" mat-list-item (click)="openLink($event)">

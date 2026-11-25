@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { MatChip, MatChipSet } from "@angular/material/chips";
 import { CdkDragDrop, moveItemInArray, CdkDrag, CdkDropList } from "@angular/cdk/drag-drop";
 import { SectionComponent } from "../../section/section.component";
@@ -18,6 +18,7 @@ export interface Vegetable {
       </mat-chip-set>
     </app-section>
   `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [MatChipSet, MatChip, CdkDropList, CdkDrag, SectionComponent]
 })
 export class ChipsDragAndDropComponent {

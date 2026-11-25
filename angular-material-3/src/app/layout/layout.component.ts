@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { BreakpointObserver } from "@angular/cdk/layout";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { MatToolbar } from "@angular/material/toolbar";
@@ -13,6 +13,7 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
     selector: "app-layout",
     templateUrl: "./layout.component.html",
     styleUrl: "./layout.component.scss",
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [
         MatToolbar,
         MatSidenavContainer,

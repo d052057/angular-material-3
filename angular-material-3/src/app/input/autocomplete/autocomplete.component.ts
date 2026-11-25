@@ -1,4 +1,4 @@
-import { Component, inject } from "@angular/core";
+import { Component, inject, ChangeDetectionStrategy } from "@angular/core";
 import { SectionComponent } from "../../section/section.component";
 import { MatFormField, MatLabel } from "@angular/material/form-field";
 import { MatAutocomplete, MatOption, MatAutocompleteTrigger } from "@angular/material/autocomplete";
@@ -25,6 +25,7 @@ export interface User {
         AsyncPipe,
         MatAutocompleteTrigger,
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-section title="Autocomplete">
       <mat-form-field [appearance]="appearance()" subscriptSizing="dynamic">
